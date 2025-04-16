@@ -1,3 +1,26 @@
+
+## Scraper Setup Instructions
+
+To enable scraping, a browser client using Playwright was implemented, since the latest version of Laravel Playwright is not yet optimized for Laravel 12.
+
+### Steps to Start the Scraper
+
+1. Navigate to the `onlyfans-scraper/` directory.
+2. Run `npm install`.
+3. Then start the scraper server with `node server.js`.
+
+The scraper will be available at:
+
+```
+http://localhost:3000
+```
+
+Make sure to add the following variable to your Laravel `.env` file:
+
+```
+SCRAPER_API_URL=http://localhost:3000
+```
+
 # OnlyFans Artisan Commands
 
 This project includes a suite of Artisan commands to scrape and manage OnlyFans profiles asynchronously using Laravel queues and Horizon.
@@ -7,7 +30,7 @@ This project includes a suite of Artisan commands to scrape and manage OnlyFans 
 ### 🔍 Search & Username Generation
 
 - **`onlyfans:generate-fake-usernames`**  
-  Create random usernames using [Faker](https://fakerphp.dev/) and optionally dispatch scraping jobs.  
+  Create random usernames using Faker and optionally dispatch scraping jobs.  
   **Usage:**  
   ```bash
   php artisan onlyfans:generate-fake-usernames --dispatch --limit=20
