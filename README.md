@@ -68,3 +68,8 @@ This project includes a suite of Artisan commands to scrape and manage OnlyFans 
 ## Notes
 
 - All scraping is handled asynchronously via Laravel Horizon and queues.
+
+## Screenshots
+<img src="./screeshots/scout.png" alt="OnlyFans Search with Scout UI" width="600"/>
+
+<img src="./screeshots//scrap.png" alt="OnlyFans Scraping UI" width="600"/>
